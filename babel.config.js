@@ -1,4 +1,7 @@
 {
+plugins:[
+
+]
   presets: [
     [
       "@babel/preset-env",
@@ -7,5 +10,5 @@
         "modules": false
       }
     ]
-  ]
+  ],
 }

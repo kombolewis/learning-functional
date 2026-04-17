@@ -284,10 +284,16 @@ const res = [
 // let titleAndAuthorForGoodBooks = compose(mapTitleAndAuthor,queryGoodBooks)
 // console.log(titleAndAuthorForGoodBooks(res))
 
-let splitIntoSpaces = str => str.split(" ")
-let count = array => array.length
-let oddOrEven = ip => ip % 2 == 0 ? "even" : "odd"
+// let splitIntoSpaces = str => str.split(" ")
+// let count = array => array.length
+// let oddOrEven = ip => ip % 2 == 0 ? "even" : "odd"
 
-const countWords = compose(oddOrEven, count, splitIntoSpaces)
-console.log(countWords("hello you're reading about composition"))
+// const countWords = compose(oddOrEven, count, splitIntoSpaces)
+// console.log(countWords("hello you're reading about composition"))
 
+let add = (x,y) => x + y
+let double = (x) => x + x
+
+const val = add(10, double(7))
+
+const val2 = 7 |> double |> (x => add(10, x))
